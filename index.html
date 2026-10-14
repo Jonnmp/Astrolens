@@ -22,9 +22,7 @@
     --danger: rgba(226,75,74,0.9);
   }
 
-  html, body {
-    height: 100%;
-  }
+  html, body { height: 100%; }
 
   body {
     font-family: 'Syne', sans-serif;
@@ -38,12 +36,9 @@
   }
 
   /* ── Estrellas de fondo ── */
-  .stars-bg {
-    position: fixed; inset: 0; pointer-events: none; z-index: 0;
-  }
+  .stars-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
   .stars-bg::before {
-    content: '';
-    position: absolute; inset: 0;
+    content: ''; position: absolute; inset: 0;
     background-image:
       radial-gradient(1px 1px at 8%  12%, rgba(255,255,255,0.85) 0%, transparent 100%),
       radial-gradient(1px 1px at 22% 44%, rgba(255,255,255,0.60) 0%, transparent 100%),
@@ -90,69 +85,39 @@
   }
 
   /* ── Pantalla de API Key ── */
-  #screenKey {
-    display: flex; flex-direction: column; gap: 1.25rem;
-  }
+  #screenKey { display: flex; flex-direction: column; gap: 1.25rem; }
 
   .key-card {
-    background: var(--deep);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 1.5rem 1.25rem;
+    background: var(--deep); border: 1px solid var(--border);
+    border-radius: 20px; padding: 1.5rem 1.25rem;
     display: flex; flex-direction: column; gap: 1rem;
   }
-
-  .key-card h2 {
-    font-size: 16px; font-weight: 700;
-    display: flex; align-items: center; gap: 8px;
-  }
-
-  .key-card p {
-    font-family: 'Space Mono', monospace;
-    font-size: 12px; line-height: 1.8; color: var(--muted);
-  }
-
+  .key-card h2 { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+  .key-card p { font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.8; color: var(--muted); }
   .key-card a { color: var(--accent); text-decoration: none; }
   .key-card a:hover { text-decoration: underline; }
 
-  .input-wrap {
-    position: relative; display: flex; align-items: center;
-  }
-
+  .input-wrap { position: relative; display: flex; align-items: center; }
   .input-wrap input {
-    width: 100%;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 48px 12px 16px;
-    font-family: 'Space Mono', monospace;
-    font-size: 13px; color: var(--text);
-    outline: none;
-    transition: border-color 0.2s;
+    width: 100%; background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border); border-radius: 12px;
+    padding: 12px 48px 12px 16px; font-family: 'Space Mono', monospace;
+    font-size: 13px; color: var(--text); outline: none; transition: border-color 0.2s;
   }
-
   .input-wrap input:focus { border-color: var(--accent); }
   .input-wrap input::placeholder { color: var(--muted); }
 
   .eye-btn {
-    position: absolute; right: 12px;
-    background: none; border: none; cursor: pointer;
-    font-size: 16px; color: var(--muted);
-    padding: 4px;
-    transition: color 0.2s;
+    position: absolute; right: 12px; background: none; border: none; cursor: pointer;
+    font-size: 16px; color: var(--muted); padding: 4px; transition: color 0.2s;
   }
   .eye-btn:hover { color: var(--text); }
 
   .notice {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px; color: var(--muted);
-    background: rgba(74,144,245,0.07);
-    border: 1px solid rgba(74,144,245,0.15);
-    border-radius: 10px;
-    padding: 10px 14px;
-    line-height: 1.7;
+    font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted);
+    background: rgba(74,144,245,0.07); border: 1px solid rgba(74,144,245,0.15);
+    border-radius: 10px; padding: 10px 14px; line-height: 1.7;
   }
-
   .notice strong { color: var(--accent); font-weight: 700; }
 
   /* ── App principal ── */
@@ -160,45 +125,25 @@
 
   .topbar {
     display: flex; align-items: center; justify-content: space-between;
-    background: var(--deep);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 10px 14px;
+    background: var(--deep); border: 1px solid var(--border);
+    border-radius: 14px; padding: 10px 14px;
   }
-
-  .topbar-key {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px; color: var(--muted);
-  }
-
+  .topbar-key { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); }
   .btn-change-key {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px; color: var(--accent);
-    background: none; border: none; cursor: pointer;
-    text-decoration: underline; padding: 0;
+    font-family: 'Space Mono', monospace; font-size: 11px; color: var(--accent);
+    background: none; border: none; cursor: pointer; text-decoration: underline; padding: 0;
   }
 
   /* ── Tabs ── */
   .mode-tabs {
-    display: flex;
-    background: var(--deep);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 4px; gap: 4px;
+    display: flex; background: var(--deep); border: 1px solid var(--border);
+    border-radius: 14px; padding: 4px; gap: 4px;
   }
-
   .tab {
-    flex: 1; text-align: center;
-    padding: 9px 4px;
-    border-radius: 10px;
-    font-size: 13px; font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s;
-    color: var(--muted);
-    border: none; background: transparent;
-    font-family: 'Syne', sans-serif;
+    flex: 1; text-align: center; padding: 9px 4px; border-radius: 10px;
+    font-size: 13px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    color: var(--muted); border: none; background: transparent; font-family: 'Syne', sans-serif;
   }
-
   .tab.active { background: rgba(74,144,245,0.18); color: var(--accent); }
 
   /* ── Panels ── */
@@ -211,26 +156,21 @@
     border: 1px solid var(--border); background: var(--deep);
     aspect-ratio: 3/4; width: 100%;
   }
-
   #videoEl, #previewCanvas {
     position: absolute; inset: 0; width: 100%; height: 100%;
     object-fit: cover; border-radius: 20px;
   }
   #previewCanvas { display: none; }
-
   .camera-placeholder {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column;
+    position: absolute; inset: 0; display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 14px;
   }
   .camera-placeholder .icon { font-size: 52px; opacity: 0.35; }
   .camera-placeholder p {
-    font-size: 13px; color: var(--muted);
-    text-align: center; padding: 0 2.5rem;
+    font-size: 13px; color: var(--muted); text-align: center; padding: 0 2.5rem;
     font-family: 'Space Mono', monospace; line-height: 1.7;
   }
 
-  /* Esquinas decorativas */
   .oc { position: absolute; width: 30px; height: 30px; border-color: var(--accent); border-style: solid; opacity: 0.55; }
   .tl { top: 14px; left: 14px; border-width: 2px 0 0 2px; border-radius: 6px 0 0 0; }
   .tr { top: 14px; right: 14px; border-width: 2px 2px 0 0; border-radius: 0 6px 0 0; }
@@ -238,18 +178,13 @@
   .br { bottom: 14px; right: 14px; border-width: 0 2px 2px 0; border-radius: 0 0 6px 0; }
 
   .crosshair {
-    position: absolute; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    pointer-events: none;
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none;
   }
   .crosshair svg { opacity: 0.35; }
-
   .live-badge {
     position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
-    background: rgba(200,40,40,0.88);
-    color: #fff; font-family: 'Space Mono', monospace;
-    font-size: 10px; letter-spacing: 0.15em;
-    padding: 3px 11px; border-radius: 20px;
+    background: rgba(200,40,40,0.88); color: #fff; font-family: 'Space Mono', monospace;
+    font-size: 10px; letter-spacing: 0.15em; padding: 3px 11px; border-radius: 20px;
     display: none; align-items: center; gap: 5px;
   }
   .live-badge.on { display: flex; }
@@ -258,30 +193,22 @@
 
   /* ── Acciones cámara ── */
   .actions { display: flex; gap: 12px; justify-content: center; align-items: center; }
-
   .btn {
     font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
-    border: 1px solid var(--border); border-radius: 50px;
-    padding: 13px 22px; cursor: pointer;
-    transition: all 0.2s;
-    display: flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border); border-radius: 50px; padding: 13px 22px; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center; gap: 8px;
   }
-
   .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); flex: 1; justify-content: center; }
   .btn-primary:hover { background: #3a7fe5; }
   .btn-primary:active { transform: scale(0.97); }
-
   .btn-secondary { background: transparent; color: var(--text); }
   .btn-secondary:hover { background: rgba(255,255,255,0.05); }
   .btn-secondary:active { transform: scale(0.97); }
-
   .btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none !important; }
 
   .capture-btn {
-    width: 66px; height: 66px; border-radius: 50%;
-    background: var(--accent);
-    border: 3px solid rgba(74,144,245,0.35);
-    box-shadow: 0 0 0 7px rgba(74,144,245,0.1);
+    width: 66px; height: 66px; border-radius: 50%; background: var(--accent);
+    border: 3px solid rgba(74,144,245,0.35); box-shadow: 0 0 0 7px rgba(74,144,245,0.1);
     cursor: pointer; display: flex; align-items: center; justify-content: center;
     transition: all 0.2s; flex-shrink: 0;
   }
@@ -291,11 +218,8 @@
 
   /* ── Upload ── */
   .upload-area {
-    border: 1px dashed rgba(74,144,245,0.35);
-    border-radius: 18px; padding: 2rem 1.25rem;
-    text-align: center; cursor: pointer;
-    transition: all 0.2s;
-    background: rgba(74,144,245,0.03);
+    border: 1px dashed rgba(74,144,245,0.35); border-radius: 18px; padding: 2rem 1.25rem;
+    text-align: center; cursor: pointer; transition: all 0.2s; background: rgba(74,144,245,0.03);
   }
   .upload-area:hover { border-color: var(--accent); background: rgba(74,144,245,0.08); }
   .upload-area .upload-icon { font-size: 36px; margin-bottom: 10px; }
@@ -305,87 +229,63 @@
 
   /* ── Loading ── */
   .loading-state {
-    display: none; flex-direction: column;
-    align-items: center; justify-content: center;
+    display: none; flex-direction: column; align-items: center; justify-content: center;
     padding: 2.5rem 1rem; gap: 1rem;
   }
   .loading-state.on { display: flex; }
   .spinner {
-    width: 42px; height: 42px;
-    border: 2px solid rgba(74,144,245,0.2);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
+    width: 42px; height: 42px; border: 2px solid rgba(74,144,245,0.2);
+    border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;
   }
   @keyframes spin { to { transform: rotate(360deg); } }
   .loading-text {
-    font-family: 'Space Mono', monospace; font-size: 12px;
-    color: var(--muted); letter-spacing: 0.08em;
-    animation: blink 1.6s ease-in-out infinite;
+    font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted);
+    letter-spacing: 0.08em; animation: blink 1.6s ease-in-out infinite;
   }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
 
   /* ── Error ── */
   .error-msg {
     font-family: 'Space Mono', monospace; font-size: 12px; color: #E87070;
-    text-align: center; padding: 0.85rem 1.1rem;
-    background: rgba(226,75,74,0.1);
-    border: 1px solid rgba(226,75,74,0.25);
-    border-radius: 12px; display: none; line-height: 1.6;
+    text-align: center; padding: 0.85rem 1.1rem; background: rgba(226,75,74,0.1);
+    border: 1px solid rgba(226,75,74,0.25); border-radius: 12px; display: none; line-height: 1.6;
   }
   .error-msg.on { display: block; }
 
   /* ── Resultado ── */
   .result-card {
-    background: var(--deep); border: 1px solid var(--border);
-    border-radius: 20px; padding: 1.25rem;
-    display: none; flex-direction: column; gap: 1rem;
+    background: var(--deep); border: 1px solid var(--border); border-radius: 20px;
+    padding: 1.25rem; display: none; flex-direction: column; gap: 1rem;
   }
   .result-card.on { display: flex; }
-
   .result-header { display: flex; align-items: center; gap: 12px; }
-
   .constellation-icon {
-    width: 48px; height: 48px; border-radius: 50%;
-    background: rgba(74,144,245,0.14);
-    border: 1px solid rgba(74,144,245,0.3);
-    display: flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px; border-radius: 50%; background: rgba(74,144,245,0.14);
+    border: 1px solid rgba(74,144,245,0.3); display: flex; align-items: center; justify-content: center;
     font-size: 22px; flex-shrink: 0;
   }
-
   .constellation-name { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; }
   .constellation-latin { font-size: 12px; color: var(--muted); font-family: 'Space Mono', monospace; font-style: italic; }
-
   .divider { height: 1px; background: var(--border); }
-
   .result-body {
-    font-family: 'Space Mono', monospace; font-size: 13px;
-    line-height: 1.85; color: #B8C4D8;
-    white-space: pre-wrap; word-break: break-word;
+    font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.85;
+    color: #B8C4D8; white-space: pre-wrap; word-break: break-word;
   }
-
   .tip-row { display: flex; gap: 8px; flex-wrap: wrap; }
-
   .badge {
-    font-family: 'Space Mono', monospace; font-size: 10px;
-    color: var(--accent); background: rgba(74,144,245,0.12);
-    border: 1px solid rgba(74,144,245,0.25);
+    font-family: 'Space Mono', monospace; font-size: 10px; color: var(--accent);
+    background: rgba(74,144,245,0.12); border: 1px solid rgba(74,144,245,0.25);
     border-radius: 20px; padding: 4px 11px; letter-spacing: 0.04em;
   }
-
   .badge-gold {
-    color: var(--gold); background: rgba(240,192,64,0.12);
-    border-color: rgba(240,192,64,0.25);
+    color: var(--gold); background: rgba(240,192,64,0.12); border-color: rgba(240,192,64,0.25);
   }
 
   /* ── Botón "Entrar" ── */
   .btn-enter {
-    width: 100%; padding: 15px;
-    background: var(--accent); color: #fff;
+    width: 100%; padding: 15px; background: var(--accent); color: #fff;
     font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px;
-    border: none; border-radius: 14px; cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: all 0.2s;
+    border: none; border-radius: 14px; cursor: pointer; letter-spacing: 0.04em; transition: all 0.2s;
   }
   .btn-enter:hover { background: #3a7fe5; }
   .btn-enter:active { transform: scale(0.98); }
@@ -396,7 +296,6 @@
 <div class="stars-bg"></div>
 
 <div class="container">
-
   <!-- HEADER -->
   <div class="header">
     <div class="logo">✦ identificador estelar</div>
@@ -404,44 +303,34 @@
     <div class="subtitle">apunta al cielo y descubre</div>
   </div>
 
-  <!-- ══ PANTALLA: API KEY ══ -->
+  <!-- ══ PANTALLA: API KEY (ACTUALIZADA A GEMINI) ══ -->
   <div id="screenKey">
-
     <div class="key-card">
-      <h2>🔑 Tu API Key de Anthropic</h2>
+      <h2>🔑 Tu API Key de Gemini</h2>
       <p>
-        Para usar AstroLens necesitas una API key de Anthropic.<br>
-        Consíguela gratis en
-        <a href="https://console.anthropic.com/keys" target="_blank">console.anthropic.com/keys</a>
+        Para usar AstroLens necesitas una API key gratuita de Google Gemini.<br>
+        Consíguela en
+        <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a>
       </p>
-
       <div class="input-wrap">
-        <input type="password" id="apiKeyInput" placeholder="sk-ant-api03-..." autocomplete="off" spellcheck="false">
+        <input type="password" id="apiKeyInput" placeholder="AIzaSy..." autocomplete="off" spellcheck="false">
         <button class="eye-btn" onclick="toggleEye()" id="eyeBtn" title="Mostrar/ocultar">👁</button>
       </div>
-
       <div class="notice">
-        <strong>🔒 Privacidad:</strong> Tu key se guarda únicamente en el almacenamiento local de este navegador
-        (<code>localStorage</code>). Nunca se envía a ningún servidor excepto directamente a la API de Anthropic.
+        <strong>🔒 Privacidad:</strong> Tu key se guarda únicamente en el almacenamiento local de este navegador.
       </div>
-
       <button class="btn-enter" onclick="saveKey()">Entrar al universo ✦</button>
     </div>
-
     <div class="error-msg" id="keyError"></div>
-
   </div>
 
   <!-- ══ PANTALLA: APP ══ -->
   <div id="screenApp">
-
-    <!-- Barra superior con key activa -->
     <div class="topbar">
-      <span class="topbar-key" id="topbarKey">key: sk-ant-···</span>
+      <span class="topbar-key" id="topbarKey">key: AIza···</span>
       <button class="btn-change-key" onclick="changeKey()">cambiar key</button>
     </div>
 
-    <!-- Tabs -->
     <div class="mode-tabs">
       <button class="tab active" onclick="switchTab('camera')">📷 Cámara en vivo</button>
       <button class="tab" onclick="switchTab('upload')">🖼 Subir imagen</button>
@@ -449,7 +338,6 @@
 
     <!-- Panel cámara -->
     <div class="panel active" id="panelCamera">
-
       <div class="camera-wrap" id="cameraWrap">
         <div class="camera-placeholder" id="cameraPlaceholder">
           <div class="icon">🌌</div>
@@ -457,10 +345,7 @@
         </div>
         <video id="videoEl" autoplay playsinline muted style="display:none"></video>
         <canvas id="previewCanvas"></canvas>
-        <div class="oc tl"></div>
-        <div class="oc tr"></div>
-        <div class="oc bl"></div>
-        <div class="oc br"></div>
+        <div class="oc tl"></div><div class="oc tr"></div><div class="oc bl"></div><div class="oc br"></div>
         <div class="crosshair">
           <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
             <circle cx="32" cy="32" r="20" stroke="#4A90F5" stroke-width="1" stroke-dasharray="4 3"/>
@@ -471,11 +356,8 @@
             <circle cx="32" cy="32" r="2" fill="#4A90F5" opacity="0.6"/>
           </svg>
         </div>
-        <div class="live-badge" id="liveBadge">
-          <div class="pulse-dot"></div> EN VIVO
-        </div>
+        <div class="live-badge" id="liveBadge"><div class="pulse-dot"></div> EN VIVO</div>
       </div>
-
       <div class="actions">
         <button class="btn btn-secondary" id="btnActivate" onclick="startCamera()">✦ Activar cámara</button>
         <button class="capture-btn" id="btnCapture" onclick="captureAndAnalyze()" disabled title="Capturar">
@@ -486,7 +368,6 @@
         </button>
         <button class="btn btn-secondary" id="btnRetake" onclick="retake()" style="display:none">↩ Repetir</button>
       </div>
-
     </div>
 
     <!-- Panel upload -->
@@ -494,7 +375,7 @@
       <div class="upload-area" onclick="document.getElementById('fileInput').click()">
         <div class="upload-icon">🔭</div>
         <p>Toca aquí para seleccionar<br>una foto del cielo nocturno</p>
-        <p style="margin-top:6px; font-size:11px; opacity:0.5">JPG · PNG · WEBP · HEIC</p>
+        <p style="margin-top:6px; font-size:11px; opacity:0.5">JPG · PNG · WEBP</p>
       </div>
       <input type="file" id="fileInput" accept="image/*" onchange="handleFileUpload(event)">
       <canvas id="uploadCanvas"></canvas>
@@ -503,16 +384,12 @@
       </button>
     </div>
 
-    <!-- Loading -->
+    <!-- Loading, Error y Resultado -->
     <div class="loading-state" id="loadingState">
       <div class="spinner"></div>
       <div class="loading-text">consultando el cosmos...</div>
     </div>
-
-    <!-- Error -->
     <div class="error-msg" id="errorMsg"></div>
-
-    <!-- Resultado -->
     <div class="result-card" id="resultCard">
       <div class="result-header">
         <div class="constellation-icon" id="resultIcon">⭐</div>
@@ -525,25 +402,21 @@
       <div class="result-body" id="resultBody"></div>
       <div class="tip-row" id="tipRow"></div>
     </div>
-
-  </div><!-- fin screenApp -->
-
-</div><!-- fin container -->
+  </div>
+</div>
 
 <script>
 /* ═══════════════════════════════════════════
-   GESTIÓN DE API KEY
+   GESTIÓN DE API KEY (ACTUALIZADO)
 ═══════════════════════════════════════════ */
-const KEY_STORAGE = 'astrolens_api_key';
+const KEY_STORAGE = 'astrolens_gemini_key';
 
-function loadKey() {
-  return localStorage.getItem(KEY_STORAGE) || '';
-}
+function loadKey() { return localStorage.getItem(KEY_STORAGE) || ''; }
 
 function saveKey() {
   const raw = document.getElementById('apiKeyInput').value.trim();
-  if (!raw.startsWith('sk-ant-')) {
-    showKeyError('La key debe comenzar con "sk-ant-". Verifica que la copiaste completa.');
+  if (raw.length < 20) {
+    showKeyError('La key parece ser inválida. Verifica que la copiaste completa.');
     return;
   }
   localStorage.setItem(KEY_STORAGE, raw);
@@ -553,7 +426,7 @@ function saveKey() {
 function enterApp(key) {
   document.getElementById('screenKey').style.display = 'none';
   document.getElementById('screenApp').style.display = 'flex';
-  const masked = key.slice(0, 10) + '···' + key.slice(-4);
+  const masked = key.slice(0, 8) + '···' + key.slice(-4);
   document.getElementById('topbarKey').textContent = 'key: ' + masked;
 }
 
@@ -562,8 +435,7 @@ function changeKey() {
   document.getElementById('screenApp').style.display = 'none';
   document.getElementById('screenKey').style.display = 'flex';
   document.getElementById('apiKeyInput').value = '';
-  stopCamera();
-  hideAll();
+  stopCamera(); hideAll();
 }
 
 function toggleEye() {
@@ -573,24 +445,19 @@ function toggleEye() {
 
 function showKeyError(msg) {
   const el = document.getElementById('keyError');
-  el.textContent = msg;
-  el.classList.add('on');
+  el.textContent = msg; el.classList.add('on');
 }
 
-/* Al cargar: si ya hay key, entrar directo */
 window.addEventListener('DOMContentLoaded', () => {
   const saved = loadKey();
-  if (saved && saved.startsWith('sk-ant-')) {
-    enterApp(saved);
-  }
-  /* Enter en el input */
+  if (saved && saved.length > 20) enterApp(saved);
   document.getElementById('apiKeyInput').addEventListener('keydown', e => {
     if (e.key === 'Enter') saveKey();
   });
 });
 
 /* ═══════════════════════════════════════════
-   TABS
+   TABS, CÁMARA Y UPLOAD (SIN CAMBIOS)
 ═══════════════════════════════════════════ */
 function switchTab(tab) {
   document.querySelectorAll('.tab').forEach((t, i) =>
@@ -601,11 +468,7 @@ function switchTab(tab) {
   hideAll();
 }
 
-/* ═══════════════════════════════════════════
-   CÁMARA
-═══════════════════════════════════════════ */
-let stream = null;
-let capturedBase64 = null;
+let stream = null; let capturedBase64 = null;
 
 async function startCamera() {
   hideAll();
@@ -614,14 +477,13 @@ async function startCamera() {
       video: { facingMode: { ideal: 'environment' }, width: { ideal: 1920 }, height: { ideal: 1440 } }
     });
     const video = document.getElementById('videoEl');
-    video.srcObject = stream;
-    video.style.display = 'block';
+    video.srcObject = stream; video.style.display = 'block';
     document.getElementById('cameraPlaceholder').style.display = 'none';
     document.getElementById('liveBadge').classList.add('on');
     document.getElementById('btnCapture').disabled = false;
     document.getElementById('btnActivate').style.display = 'none';
   } catch(e) {
-    showError('No se pudo acceder a la cámara. Verifica que diste permiso al navegador.');
+    showError('No se pudo acceder a la cámara. Verifica los permisos.');
   }
 }
 
@@ -633,14 +495,11 @@ function captureAndAnalyze() {
   canvas.getContext('2d').drawImage(video, 0, 0);
   capturedBase64 = canvas.toDataURL('image/jpeg', 0.88).split(',')[1];
 
-  stopCamera();
-  video.style.display = 'none';
-  canvas.style.display = 'block';
+  stopCamera(); video.style.display = 'none'; canvas.style.display = 'block';
   document.getElementById('liveBadge').classList.remove('on');
   document.getElementById('btnCapture').style.display = 'none';
   document.getElementById('btnRetake').style.display = 'inline-flex';
   document.getElementById('btnActivate').style.display = 'none';
-
   analyzeImage(capturedBase64);
 }
 
@@ -649,18 +508,11 @@ function retake() {
   document.getElementById('btnRetake').style.display = 'none';
   document.getElementById('btnCapture').style.display = 'flex';
   document.getElementById('btnActivate').style.display = 'inline-flex';
-  capturedBase64 = null;
-  hideAll();
-  startCamera();
+  capturedBase64 = null; hideAll(); startCamera();
 }
 
-function stopCamera() {
-  if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
-}
+function stopCamera() { if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; } }
 
-/* ═══════════════════════════════════════════
-   UPLOAD
-═══════════════════════════════════════════ */
 let uploadedBase64 = null;
 
 function handleFileUpload(event) {
@@ -672,9 +524,7 @@ function handleFileUpload(event) {
     const img = new Image();
     img.onload = () => {
       const canvas = document.getElementById('uploadCanvas');
-      /* Redimensionar si la imagen es muy grande */
-      const MAX = 1600;
-      let w = img.width, h = img.height;
+      const MAX = 1600; let w = img.width, h = img.height;
       if (w > MAX || h > MAX) {
         const ratio = Math.min(MAX/w, MAX/h);
         w = Math.round(w * ratio); h = Math.round(h * ratio);
@@ -690,23 +540,18 @@ function handleFileUpload(event) {
   reader.readAsDataURL(file);
 }
 
-function analyzeUpload() {
-  if (!uploadedBase64) return;
-  analyzeImage(uploadedBase64);
-}
+function analyzeUpload() { if (uploadedBase64) analyzeImage(uploadedBase64); }
 
 /* ═══════════════════════════════════════════
-   ANÁLISIS CON CLAUDE
+   ANÁLISIS CON GEMINI API (NUEVO)
 ═══════════════════════════════════════════ */
 async function analyzeImage(base64) {
-  showLoading(true);
-  hideResult(); hideError();
+  showLoading(true); hideResult(); hideError();
 
   const apiKey = loadKey();
-
   const prompt = `Eres un astrónomo experto y apasionado. Analiza esta imagen del cielo nocturno.
 
-Responde ÚNICAMENTE con un objeto JSON válido (sin texto antes ni después, sin bloques de código markdown), con exactamente esta estructura:
+Responde ÚNICAMENTE con un objeto JSON válido, con exactamente esta estructura:
 {
   "found": true,
   "name": "Nombre de la constelación en español",
@@ -733,53 +578,39 @@ Si la imagen NO muestra el cielo nocturno claramente, o no es posible identifica
 }`;
 
   try {
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    
+    const response = await fetch(url, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-opus-4-5',
-        max_tokens: 1024,
-        messages: [{
-          role: 'user',
-          content: [
-            { type: 'image', source: { type: 'base64', media_type: 'image/jpeg', data: base64 } },
-            { type: 'text', text: prompt }
+        contents: [{
+          parts: [
+            { text: prompt },
+            { inline_data: { mime_type: "image/jpeg", data: base64 } }
           ]
-        }]
+        }],
+        generationConfig: {
+          response_mime_type: "application/json" // Esto fuerza a Gemini a responder en JSON perfecto
+        }
       })
     });
 
-    if (response.status === 401) {
-      showError('API key inválida o expirada. Toca "cambiar key" para actualizarla.');
-      return;
-    }
-    if (response.status === 429) {
-      showError('Límite de peticiones alcanzado. Espera un momento e intenta de nuevo.');
-      return;
-    }
     if (!response.ok) {
-      showError('Error ' + response.status + ' al contactar la API. Intenta de nuevo.');
-      return;
+      if (response.status === 400) throw new Error('API key inválida. Toca "cambiar key" para actualizarla.');
+      throw new Error('Error ' + response.status + ' al contactar la API.');
     }
 
     const data = await response.json();
-    const rawText = (data.content || []).map(b => b.text || '').join('');
-    /* Limpiar posibles backticks */
+    const rawText = data.candidates[0].content.parts[0].text;
+    
+    // Parseo seguro
     const clean = rawText.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
     const result = JSON.parse(clean);
     showResult(result);
 
   } catch(e) {
-    if (e instanceof SyntaxError) {
-      showError('La respuesta de Claude no pudo procesarse. Intenta de nuevo.');
-    } else {
-      showError('Error de red. Verifica tu conexión e intenta de nuevo.');
-    }
+    showError(e.message || 'Error al procesar la imagen. Verifica tu conexión e intenta de nuevo.');
     console.error('AstroLens error:', e);
   } finally {
     showLoading(false);
@@ -787,7 +618,7 @@ Si la imagen NO muestra el cielo nocturno claramente, o no es posible identifica
 }
 
 /* ═══════════════════════════════════════════
-   UI HELPERS
+   UI HELPERS (SIN CAMBIOS)
 ═══════════════════════════════════════════ */
 function showResult(r) {
   document.getElementById('resultIcon').textContent = r.icon || '✨';
@@ -809,16 +640,12 @@ function showResult(r) {
   tipRow.innerHTML = '';
   if (r.found && Array.isArray(r.stars)) {
     r.stars.forEach(s => {
-      const b = document.createElement('span');
-      b.className = 'badge';
-      b.textContent = '★ ' + s;
+      const b = document.createElement('span'); b.className = 'badge'; b.textContent = '★ ' + s;
       tipRow.appendChild(b);
     });
   }
   if (r.found && r.tip) {
-    const b = document.createElement('span');
-    b.className = 'badge badge-gold';
-    b.textContent = '💡 ' + r.tip;
+    const b = document.createElement('span'); b.className = 'badge badge-gold'; b.textContent = '💡 ' + r.tip;
     tipRow.appendChild(b);
   }
 
@@ -828,23 +655,13 @@ function showResult(r) {
 
 function showLoading(show) {
   document.getElementById('loadingState').classList.toggle('on', show);
-  const cap = document.getElementById('btnCapture');
-  if (cap) cap.disabled = show;
+  const cap = document.getElementById('btnCapture'); if (cap) cap.disabled = show;
 }
 
 function hideResult()  { document.getElementById('resultCard').classList.remove('on'); }
 function hideError()   { document.getElementById('errorMsg').classList.remove('on'); }
-
-function showError(msg) {
-  const el = document.getElementById('errorMsg');
-  el.textContent = msg;
-  el.classList.add('on');
-}
-
-function hideAll() {
-  hideResult(); hideError();
-  document.getElementById('loadingState').classList.remove('on');
-}
+function showError(msg){ const el = document.getElementById('errorMsg'); el.textContent = msg; el.classList.add('on'); }
+function hideAll()     { hideResult(); hideError(); document.getElementById('loadingState').classList.remove('on'); }
 </script>
 
 </body>
