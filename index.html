@@ -578,7 +578,8 @@ Si la imagen NO muestra el cielo nocturno claramente, o no es posible identifica
 }`;
 
   try {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+    // Volvemos al modelo estándar estable
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
     
     const response = await fetch(url, {
       method: 'POST',
@@ -591,32 +592,32 @@ Si la imagen NO muestra el cielo nocturno claramente, o no es posible identifica
           ]
         }],
         generationConfig: {
-          response_mime_type: "application/json" // Esto fuerza a Gemini a responder en JSON perfecto
+          response_mime_type: "application/json"
         }
       })
     });
 
+    // 🔴 NUEVA PARTE: Capturamos el error exacto de Google
     if (!response.ok) {
-      if (response.status === 400) throw new Error('API key inválida. Toca "cambiar key" para actualizarla.');
-      throw new Error('Error ' + response.status + ' al contactar la API.');
+      const errorData = await response.json();
+      console.error("Detalle de Google:", errorData);
+      throw new Error(`Google dice: ${errorData.error?.message || 'Error ' + response.status}`);
     }
 
     const data = await response.json();
     const rawText = data.candidates[0].content.parts[0].text;
     
-    // Parseo seguro
     const clean = rawText.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim();
     const result = JSON.parse(clean);
     showResult(result);
 
   } catch(e) {
-    showError(e.message || 'Error al procesar la imagen. Verifica tu conexión e intenta de nuevo.');
+    showError(e.message || 'Error al procesar la imagen.');
     console.error('AstroLens error:', e);
   } finally {
     showLoading(false);
   }
 }
-
 /* ═══════════════════════════════════════════
    UI HELPERS (SIN CAMBIOS)
 ═══════════════════════════════════════════ */
